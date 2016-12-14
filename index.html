@@ -550,22 +550,12 @@
                 </div>
             </div>
             <div class="row">
-                <div id="map_canvas" style="height: 400px;">
-                  <noscript>
-                    <img src="img/map.png" alt="Map to @Kitchen in Plymouth City Market, Plymouth, PL1 1PS"/>
-                  </noscript>
-                </div>
-                <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp&amp;callback=init_map"></script>
-                <script type="text/javascript">
-                  function init_map() {
-                    var coordinates = new google.maps.LatLng(50.3704862, -4.1431321);
-                    var options = { center: coordinates, zoom: 15, mapTypeId: google.maps.MapTypeId.ROADMAP };
-                    var map = new google.maps.Map(document.getElementById("map_canvas"), options);
-                    var marker = new google.maps.Marker({ title: '@Kitchen', position: coordinates, map: map, icon: 'img/map-marker.png', shadow: 'img/map-marker-shadow.png' });
-                    var bubble = new google.maps.InfoWindow({ content: '<div style="width: 280px;"><p><img src="img/plymouth-city-market.png" style="float: left; margin-right: 20px;" /><strong>@Kitchen</strong><br />Plymouth City Market<br />Plymouth PL1 1PS</p></div>' });
-                    google.maps.event.addListener(marker, 'click', function() { bubble.open(map, marker); });
-                  }
-                </script>
+                <iframe src="//www.google.com/maps/embed/v1/place?q=atkitchen%20Plymouth%20PL1%201PS
+                    &zoom=13
+                    &attribution_source=Google+Maps+Embed+API
+                    &attribution_web_url=https://developers.google.com/maps/documentation/embed/
+                    &key=AIzaSyAZv9RbmNHdNM_6IeG_O2EsPyhoEmmO-tk" allowfullscreen style="width:100%">
+                </iframe>
             </div>
         </div>
     </section>
